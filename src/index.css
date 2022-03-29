@@ -5,6 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #09c135
+}
+
+
+
+h1 {
+  font-style: italic;
+  font-size: 55px;
+}
+
+input {
+  font-style: italic; 
 }
 
 code {

@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header/Header';
+
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import Calories from './components/Calories/Calories';
+import MernayaTab from './components/MernayaTab/MernayaTab';
+import PageNotFound from './components/404/404';
+import Recipts from './components/Recipts/Recipts';
+import ReciptsDetail from './components/Recipts/ReciptsDetail/ReciptsDetail';
+import PostListProvider from './contexts/PostListContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <PostListProvider>
+       <BrowserRouter>
+       <Header />
+       <div className="container py-5">
+    <Routes>
+      <Route path="/" element={<Recipts/>}/>
+      <Route path ="/:id" element={<ReciptsDetail />} />
+          <Route path="/calories" element={<Calories />} />
+          <Route path="/mernayatab" element={<MernayaTab />} />
+          <Route path="*" element={<PageNotFound />} />
+    </Routes>
+    
     </div>
+    
+  </BrowserRouter>   
+ </PostListProvider>
+ 
+  
   );
 }
 
 export default App;
+
