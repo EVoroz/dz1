@@ -9,7 +9,7 @@ const Form = () => {
     const [image, setImage] = useState('')
     const [tags, setTags] = useState('')
     const [post, setPost] = useState('')
-    const [products,setProducts] = useState('')
+    
 
     const { createPost } = useContext(PostListContext);
 
@@ -17,23 +17,23 @@ const Form = () => {
     const changePost = (e) => setPost(e.target.value)
     const changeTags = (e) => setTags(e.target.value)
     const changeImage = (e) => setImage(e.target.value)
-    const changeProducts = (e) => setProducts(e.target.value)
+    
 
     const submitHandler = (e) => {
       e.preventDefault()
 
       const inputTrim = input.trim()
       const imageTrim = image.trim()
-      const productsTrim = products.trim()
+      
       const postTrim = post.trim()
       const tagstTrim = tags.trim()
 
-      if(inputTrim && postTrim && imageTrim && tagstTrim && productsTrim) {
-        createPost(inputTrim, postTrim, productsTrim, imageTrim, tagstTrim)
+      if(inputTrim && postTrim && imageTrim && tagstTrim ) {
+        createPost(inputTrim, postTrim, imageTrim, tagstTrim)
 
         setInput('')
         setPost('')
-        setProducts ('')
+        
         setImage('')
         setTags('')
       }
@@ -44,7 +44,7 @@ const Form = () => {
 
 <form onSubmit={submitHandler}>
 
-<div className="mb-3 w-300" >
+<div className="mb-3 w-200" >
 
 <input type="text" name="name" className="form-control mb-3"
  id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -52,11 +52,7 @@ const Form = () => {
   value={post}
   onChange={changePost}
   />
-  <input type="text" name="inged" className="form-control mb-3"
-  id="exampleInputEmail1" aria-describedby="emailHelp"
-  placeholder="Продукты"value={products}
-  onChange={changeProducts}/>
-
+  
 <input type="text" name="pic" className="form-control mb-3"
  id="exampleInputEmail1" aria-describedby="emailHelp"
   placeholder="фото рецепта"

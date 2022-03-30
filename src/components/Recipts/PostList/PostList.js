@@ -10,8 +10,8 @@ const PostList = () => {
     const {posts} = useContext(PostListContext)
 
     return (
-<div>
-            <ul className="list-group">
+<div className="row row-cols-3 mx-7 " >
+            
               {posts.length ? posts.map((post, i)=> {
                   return(
                       <PostItem 
@@ -27,7 +27,7 @@ const PostList = () => {
               }) :<p>List emty....</p>
             }
 
-            </ul>
+            
         </div>
     )
 }

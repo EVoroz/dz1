@@ -8,13 +8,13 @@ const PostListContext = createContext()
 
 const PostListProvider = ({children}) => {
 
-    const { posts, createPost, deletePost, clearAllPosts } =
+    const { posts, createPost, deletePost, clearAllPosts, LSPostsKey, openModal, closeModal, viewModal } =
     usePosts();
 
 
     return (
         <PostListContext.Provider 
-         value={{ posts, createPost, deletePost, clearAllPosts }}>
+         value={{ posts, createPost, deletePost, clearAllPosts,LSPostsKey, openModal, closeModal, viewModal }}>
             {
                 children
             }

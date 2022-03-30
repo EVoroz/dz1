@@ -3,12 +3,12 @@ import { Link } from "react-router-dom"
 import { PostListContext } from "../../../../contexts/PostListContext"
 
 
-const PostItem =({id, index, post,products, image, tags, input}) => {
+const PostItem =({id, index, post,image, tags, input}) => {
 const {deletePost} = useContext(PostListContext)
 const deleteHandler = () => deletePost(id)
 
 return (
-    <div class="card mb-3 w-55" >
+    <div className="card m-2 bg-danger p-2 text-dark bg-opacity-10  shadow p-3 mb-5 bg-body rounded" style={{ width: '18rem' }}>
     <li className="list-group-item">
     
         <span>
@@ -16,22 +16,16 @@ return (
             
             <div className="row g-0">
 
-    <div class="col-md-2 mt-2">
-            <img src={image} width={300} height={300} className="img-fluid rounded-start" alt="img" />   
-            </div>
-            <div className="col-md-9">
+            <img src={image} width={300} height={300} className="img-fluid rounded-start mt-2" alt="img" />   
+           
       <div class="card-body">
-            <div>{post}</div>
-            
-            <p className="card-text">{products}</p>
-
+           
             <div>{input}</div>
-            <div>#{tags}</div>
+            <div className="tag">#{tags}</div>
             </div>
             </div>
-            </div>
+            
         </span>
-       
        
         <div>
             <button onClick={deleteHandler} type="button"
