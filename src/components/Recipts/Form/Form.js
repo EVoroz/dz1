@@ -42,7 +42,7 @@ const Form = () => {
 
     return (
 
-<form onSubmit={submitHandler}>
+<form onSubmit={submitHandler} className="d-flex flex-column align-items-center">
 
 <div className="mb-3 w-200" >
 

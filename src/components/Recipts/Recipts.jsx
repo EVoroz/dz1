@@ -1,7 +1,7 @@
 
 import Form from './Form/Form';
 import PostList from './PostList/PostList';
-
+import Search from "../Recipts/SearchPost/Search";
 const Recipts = () => {
 	
 	
@@ -13,17 +13,13 @@ const Recipts = () => {
          <img src="./img/recip1.jpg" width={450} height={300} alt="picc" />   
        </div>
 	   <hr />
-
-	  
-
+ 
+	   <div className="d-flex mt-3 mb-4 justify-content-evenly">
 <Form />
 
-<hr />
-
+<Search />
+</div>
 <PostList />
-
-
-
 
 		</>
 

@@ -1,5 +1,6 @@
 
 import { Link, NavLink } from "react-router-dom";
+
 import './styles.css'
 const Header = () => {
 
@@ -34,6 +35,8 @@ const Header = () => {
        </div>
        </div>
        </nav>
+      
+       
        </>  
    
     )
