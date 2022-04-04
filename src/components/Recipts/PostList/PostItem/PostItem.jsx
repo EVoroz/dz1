@@ -1,3 +1,4 @@
+import React from 'react'
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { PostListContext } from "../../../../contexts/PostListContext"
@@ -21,7 +22,7 @@ return (
       <div class="card-body">
            
             <div>{input}</div>
-            <div className="tag">#{tags}</div>
+            <div className='tag'>#{tags}</div>
             </div>
             </div>
             

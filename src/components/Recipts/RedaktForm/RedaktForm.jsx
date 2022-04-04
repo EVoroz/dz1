@@ -1,3 +1,4 @@
+import React from 'react'
 import { useContext, useState } from "react"
 import { useParams } from "react-router-dom"
 import { PostListContext } from "../../../contexts/PostListContext"

@@ -1,3 +1,4 @@
+import React from 'react'
 import { useContext, useState } from "react"
 import { PostListContext } from "../../../contexts/PostListContext"
 
@@ -69,7 +70,7 @@ const Form = () => {
 
 <input type="text" name="tag" className="form-control mb-3"
  id="exampleInputEmail1" aria-describedby="emailHelp"
-  placeholder="# tag"
+  placeholder="#tag"
   value={tags}
   onChange={changeTags}
   />

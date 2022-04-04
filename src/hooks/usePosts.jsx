@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react"
 
 const LSPostsKey = "posts";
@@ -6,9 +7,9 @@ const usePosts = () => {
 
     const [posts, setPosts] = useState([]);
 
-    const createPost = async (text, post,category, image, tags) => {
+    const createPost = async (text, post,image, tags) => {
         const newPost = {
-            id: Date.now(), text, post,category, image, tags,
+            id: Date.now(), text, post,image, tags,
         }
          setPosts((prev) => [...prev, newPost]);
     }
@@ -29,7 +30,7 @@ const deletePost = (id) => {
 
     } else {
 
-			fetch('https://jsonplaceholder.typicode.com/todos/?_limit=2')
+			fetch('https://jsonplaceholder.typicode.com/todos/?_limit=3')
 				.then(res => res.json())
 				.then(data => data.map(({title, userId, ...rest}) => ({...rest, text: title})))
 				.then(setPosts)

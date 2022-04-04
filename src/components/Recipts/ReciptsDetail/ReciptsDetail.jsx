@@ -1,3 +1,4 @@
+import React from 'react'
 import { useContext, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { PostListContext } from "../../../contexts/PostListContext"
@@ -28,7 +29,7 @@ const ReciptsDetail = () => {
         <>
          
         <div className="card" style={{ width: '50rem' }} >
-        <img src={dataForPost.image} width={400} height={350} className="img-fluid rounded-start" alt="img" /> 
+        <img src={dataForPost.image} width={400} height={350} className="img-fluid rounded-start" alt="pic" /> 
         <div className="card-body">
           <h5 className="card-title">{dataForPost.post}</h5>
          

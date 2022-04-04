@@ -1,4 +1,4 @@
-
+import React from 'react'
 import { Link, NavLink } from "react-router-dom";
 
 import './styles.css'
@@ -24,6 +24,9 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       
+        <li className="nav-item">
+          <NavLink className="nav-link" to="main">Main</NavLink>
+        </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="calories">Таблицы калорийности</NavLink>
         </li>

@@ -1,4 +1,4 @@
-
+import React from 'react'
 import './App.css';
 import Header from './components/Header/Header';
 
@@ -15,6 +15,7 @@ import PageNotFound from './components/404/404';
 import Recipts from './components/Recipts/Recipts';
 import ReciptsDetail from './components/Recipts/ReciptsDetail/ReciptsDetail';
 import PostListProvider from './contexts/PostListContext';
+import Main from './components/Main/Main';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Route path="/" element={<Recipts/>}/>
       <Route path ="/:id" element={<ReciptsDetail />} />
           <Route path="/calories" element={<Calories />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/mernayatab" element={<MernayaTab />} />
           <Route path="*" element={<PageNotFound />} />
     </Routes>

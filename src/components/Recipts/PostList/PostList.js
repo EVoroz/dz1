@@ -1,4 +1,4 @@
-
+import React from 'react'
 import { useContext } from "react"
 import { PostListContext } from "../../../contexts/PostListContext"
 import PostItem from "./PostItem/PostItem"
@@ -19,7 +19,6 @@ const PostList = () => {
                       index={i}
                       id={post.id}
                       post={post.post}
-                      products ={post.products}
                       text={post.text}
                       image={post.image}
                       tags={post.tags} />
